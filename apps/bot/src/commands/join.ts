@@ -251,8 +251,8 @@ export default class Join extends GeneralCommand {
 
     const isOwner = "309739716419387393" === ctx.user.id;
     if (!isOwner) {
-      const maintenence = await checkMaintenance(this.client.bot.user.id);
-      if (maintenence)
+      //const maintenence = await checkMaintenance(this.client.bot.user.id);
+      if (true)
         return {
           content: `⚠️ __The bot is currently undergoing maintenance. Please try again later.__\n`,
           ephemeral: true,
