@@ -304,7 +304,7 @@ export default class Join extends GeneralCommand {
     const recNick = cutoffText("TestMusicBot");
     await ctx.defer();
     let nickChanged = false;
-    if (selfUser && (!selfUser.nick || !selfUser.nick.includes('[RECORDING]')))
+    if (selfUser && (!selfUser.nick || !selfUser.nick.includes('TestMusicBot')))
       try {
         const nickWarnTimeout = setTimeout(() => {
           if (!nickChanged)
