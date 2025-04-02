@@ -188,7 +188,8 @@ export default class AutoRecord extends GeneralCommand {
         const blessingUser = blessing ? await this.prisma.user.findFirst({ where: { id: blessing.userId } }) : null;
         const parsedRewards = parseRewards(this.recorder.client.config, userData?.rewardTier ?? 0, blessingUser?.rewardTier ?? 0);
         // Check if user can manage auto-recordings
-        if (!parsedRewards.rewards.features.includes('auto'))
+        //if (!parsedRewards.rewards.features.includes('auto'))
+        if (true)
           return {
             content: stripIndents`
               Sorry, but this feature is only for $4 patrons.
