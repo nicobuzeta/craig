@@ -214,6 +214,8 @@ export default class Join extends GeneralCommand {
         ephemeral: true
       };
 
+    console.log("***ctx.userid", ctx.user.id);
+
     // Check for maintenence
     const isElevated = this.client.config.elevated
       ? Array.isArray(this.client.config.elevated)
