@@ -102,9 +102,10 @@ module.exports = {
         },
         [0]: {
           // Default
-          recordHours: 6,
-          downloadExpiryHours: 168,
-          features: []
+          recordHours: 24,
+          downloadExpiryHours: 720,
+          features: ['mix', 'auto', 'drive', 'glowers', 'eccontinuous', 'ecflac', 'mp3'],
+          sizeLimitMult: 5
         },
         [10]: {
           // Supporters / I'm chipping in!
@@ -140,7 +141,7 @@ module.exports = {
     status: {
       type: 4, // [custom status]
       name: 'craig',
-      state: 'Recording VCs • craig.chat'
+      state: 'Buena Perrits'
     },
 
     logger: {
