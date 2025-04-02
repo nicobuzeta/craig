@@ -189,31 +189,30 @@ export default class AutoRecord extends GeneralCommand {
         const parsedRewards = parseRewards(this.recorder.client.config, userData?.rewardTier ?? 0, blessingUser?.rewardTier ?? 0);
         // Check if user can manage auto-recordings
         //if (!parsedRewards.rewards.features.includes('auto'))
-        if (true)
-          return {
-            content: stripIndents`
-              Sorry, but this feature is only for $4 patrons.
-              If you have recently became a patron, login to the [dashboard](https://my.craig.chat/).
-              Your benefits may take up to an hour to become active.
-
-              > **Note:** You can still record regularly with the \`/join\` command.
-            `,
-            components: [
-              {
-                type: ComponentType.ACTION_ROW,
-                components: [
-                  {
-                    type: ComponentType.BUTTON,
-                    style: ButtonStyle.LINK,
-                    label: 'Patreon',
-                    url: 'https://patreon.com/CraigRec'
-                  }
-                ]
-              }
-            ],
-            ephemeral: true
-          };
-
+        //  return {
+        //    content: stripIndents`
+        //      Sorry, but this feature is only for $4 patrons.
+        //      If you have recently became a patron, login to the [dashboard](https://my.craig.chat/).
+        //      Your benefits may take up to an hour to become active.
+        //
+        //      > **Note:** You can still record regularly with the \`/join\` command.
+        //    `,
+        //    components: [
+        //      {
+        //        type: ComponentType.ACTION_ROW,
+        //        components: [
+        //          {
+        //            type: ComponentType.BUTTON,
+        //            style: ButtonStyle.LINK,
+        //            label: 'Patreon',
+        //            url: 'https://patreon.com/CraigRec'
+        //          }
+        //        ]
+        //      }
+        //    ],
+        //    ephemeral: true
+        //  };
+        //
         const channel = ctx.options.on.channel as string;
         const min = ctx.options.on.minimum ?? 0;
         const triggerUsers = ctx.users.map((u) => u.id);
