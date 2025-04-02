@@ -301,7 +301,7 @@ export default class Join extends GeneralCommand {
 
     // Nickname the bot
     const selfUser = await getSelfMember(guild, this.client.bot);
-    const recNick = cutoffText(`![RECORDING] ${selfUser ? selfUser.nick ?? selfUser.username : this.client.bot.user.username}`, 32);
+    const recNick = cutoffText("TestMusicBot");
     await ctx.defer();
     let nickChanged = false;
     if (selfUser && (!selfUser.nick || !selfUser.nick.includes('[RECORDING]')))
@@ -313,7 +313,7 @@ export default class Join extends GeneralCommand {
               I cannot start recording until I've changed my nickname. Please be patient.
             `);
         }, 3000) as unknown as number;
-        await this.client.bot.editGuildMember(ctx.guildID, '@me', { nick: recNick }, 'Setting recording status');
+        await this.client.bot.editGuildMember(ctx.guildID, '@me', { nick: recNick }, 'Setting r status');
         nickChanged = true;
         clearTimeout(nickWarnTimeout);
       } catch (e) {
